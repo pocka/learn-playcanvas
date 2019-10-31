@@ -11,11 +11,18 @@ window.addEventListener('resize', () => {
   app.resizeCanvas()
 })
 
+const redMaterial = new pc.StandardMaterial()
+redMaterial.diffuse = new pc.Color(1, 0, 0)
+redMaterial.update()
+
 const cube = new pc.Entity('cube')
 
 cube.addComponent('model', {
   type: 'box'
 })
+
+// Why ModelComponent doesn't have type definition for `material` property?
+;(cube.model as any).material = redMaterial
 
 const camera = new pc.Entity('camera')
 
