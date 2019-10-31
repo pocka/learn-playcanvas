@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "lib": ["es5", "dom", "esnext"],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true
+  }
+}

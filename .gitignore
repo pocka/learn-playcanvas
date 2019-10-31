@@ -1,0 +1,10 @@
+# JavaScript common rules
+node_modules
+*.log
+
+# Parcel specific rules
+.cache
+/dist
+
+# Project specific rules
+/build
