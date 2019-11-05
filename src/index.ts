@@ -21,8 +21,9 @@ cube.addComponent('model', {
   type: 'box'
 })
 
-// Why ModelComponent doesn't have type definition for `material` property?
-;(cube.model as any).material = redMaterial
+cube.model?.meshInstances.forEach(mesh => {
+  mesh.material = redMaterial
+})
 
 const camera = new pc.Entity('camera')
 
