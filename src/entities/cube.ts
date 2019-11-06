@@ -8,7 +8,7 @@ export const cube = new pc.Entity('cube')
 
 cube.addComponent('model', {
   type: 'box'
-})
+} as pc.ModelComponent)
 
 cube.model?.meshInstances.forEach(mesh => {
   mesh.material = redMaterial
